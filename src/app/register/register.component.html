@@ -1,0 +1,67 @@
+<div class="container">
+    <button class="btn btn-info" (click)="iollapsed()">Teacher</button><button class="btn btn3" (click)="iollapsed2()">Student</button><button class="btn btn4" (click)="iollapsed3()">Adminstrator</button>
+</div>
+<div  *ngIf="success" class="success1">  
+    success
+    
+    
+    </div>
+<form [formGroup]="registerForm" [ngbCollapse]="isCollapsed">
+  
+<h1>WinjiGo for {{title}}</h1>
+<p class="center">Register Using</p>
+<div class="container">
+<img class="i1 img-responsive" src="assets/images/icon3.png">
+
+</div>
+<div class="container">
+    <img class="i2 " src="assets/images/line.png">
+    <span>or</span>
+    <img class="i2 " src="assets/images/line.png">
+</div>
+
+<div  *ngIf=" submitted && (registerForm.controls.email.errors|| registerForm.controls.acceptTerms.errors||registerForm.controls.confirmPassword.errors)" 
+class="p  alert-danger">  
+
+<ul><li *ngIf="registerForm.controls.email.errors">E-mail address is required</li>
+
+<li *ngIf="registerForm.controls.acceptTerms.errors">Please accept Terms</li>
+
+<li *ngIf="registerForm.controls.confirmPassword.errors">password error</li>
+
+</ul>
+
+</div>
+
+<div class="formElements">
+       
+    <label >E-mail Address</label>
+    <p [ngClass]="{ 'has-error':  false}">
+        <input class="form-control " type="email" formControlName="email"></p>
+        <label >Password</label>
+        <p [ngClass]="{ 'has-error':  false}">
+            <input class="form-control " type="password" formControlName="password"></p>
+            <label >Confirm Password</label>
+            <p [ngClass]="{ 'has-error':  false}">
+                <input class="form-control " type="password" formControlName="confirmPassword"></p>
+                <div class="form-check">
+                    <input class="form-check-input md-icon-float" type="checkbox" value="" id="defaultCheck1" formControlName="acceptTerms">
+                    <label class="form-check-label" for="defaultCheck1" >
+                        By marking this checkbox, you agree to our 
+                   
+                   <a  href=""> End User License Agreement, Terms & Conditions </a> and you confirm that you've read our
+                   <a  href=""> Privacy Policy </a> incuding our Cookie Use
+                 </label>
+
+                  </div>
+
+</div>
+<div class="container2">
+<button class="btn btn2" (click)="submit()">Sign Up</button></div>
+</form>
+<div class="container2">
+<mat-divider class="divide"></mat-divider></div>
+
+        <div class="container2"> <p>Already have an account?                    
+            <a  routerLinkActive='active' [routerLink]="['/login']"> Login </a> 
+</p></div>
