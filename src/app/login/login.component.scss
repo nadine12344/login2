@@ -4,11 +4,71 @@ h1{
    margin:2px;
     color:rgb(48, 83, 180);
 }
+.fa-facebook{
+    background-color: rgb(58, 94, 160);
+  
+}
+.fa-square-o{
+    background-color: rgb(236, 69, 47);
+  
+}
+.fa-windows{
+    background-color: rgb(14, 171, 233);
+ 
+}
+.fa-google{
+    background-color: rgb(218, 48, 5);
+}
+.fa-university{
+    background-color: rgb(230, 135, 10);
+}
+[class*="fa fa-"] {
+    width:9%;
+    height:60px;
+    line-height: 60px;
+   margin: 9px;
+    border-radius: 80%;
+    color: #fff;
+  
+
+   
+    font-size:150%;
+    text-align: center;
+}
+@media only screen and (max-width: 801px) {
+    [class*="fa fa-"] {
+   
+        height:50px;
+        line-height: 50px;
+        font-size:120%;
+
+       
+    }}
+    @media only screen and (max-width: 500px) {
+        [class*="fa fa-"] {
+       
+            height:30px;
+            line-height: 30px;
+            font-size:60%;
+    
+           
+        }}
+@media only screen and (max-width: 430px) {
+    [class*="fa fa-"] {
+   
+        height:23px;
+        line-height: 23px;
+        font-size:60%;
+
+       
+    }}
+  
 a{
     color:rgb(74, 167, 190);
 }form{
 
     margin:3%;
+    width:90%;
     padding:10px;
     border: 1.7px solid #d8d6d6;
     border-radius: 5px;
@@ -75,3 +135,13 @@ a{
     display: flex;
     justify-content: center;
 }
+.half{margin: 6px;
+    margin-top:10px;
+    
+    width:90%
+   
+}
+@media only screen and (min-width: 801px) {
+    form{
+        width: 800px;
+    }}

@@ -6,18 +6,20 @@
     
     
     </div>
+    <div class="container">
+
 <form [formGroup]="registerForm" [ngbCollapse]="isCollapsed">
   
 <h1>WinjiGo for {{title}}</h1>
 <p class="center">Register Using</p>
 <div class="container">
-<img class="i1 img-responsive" src="assets/images/icon3.png">
-
+    <i class="fa fa-square-o" aria-hidden="true">
+</i>
 </div>
 <div class="container">
-    <img class="i2 " src="assets/images/line.png">
+    <mat-divider class="half"></mat-divider>
     <span>or</span>
-    <img class="i2 " src="assets/images/line.png">
+    <mat-divider class="half"></mat-divider>
 </div>
 
 <div  *ngIf=" submitted && (registerForm.controls.email.errors|| registerForm.controls.acceptTerms.errors||registerForm.controls.confirmPassword.errors)" 
@@ -36,16 +38,18 @@ class="p  alert-danger">
 <div class="formElements">
        
     <label >E-mail Address</label>
-    <p [ngClass]="{ 'has-error':  false}">
+    <p [ngClass]="{ 'has-error':  submitted && registerForm.controls.email.errors }">       
         <input class="form-control " type="email" formControlName="email"></p>
         <label >Password</label>
-        <p [ngClass]="{ 'has-error':  false}">
-            <input class="form-control " type="password" formControlName="password"></p>
+        <p [ngClass]="{ 'has-error':  submitted && registerForm.controls.password.errors }">       
+        <input class="form-control " type="password" formControlName="password"></p>
             <label >Confirm Password</label>
-            <p [ngClass]="{ 'has-error':  false}">
-                <input class="form-control " type="password" formControlName="confirmPassword"></p>
+            <p [ngClass]="{ 'has-error':  submitted && registerForm.controls.confirmPassword.errors }">        
+            <input class="form-control " type="password" formControlName="confirmPassword"></p>
                 <div class="form-check">
-                    <input class="form-check-input md-icon-float" type="checkbox" value="" id="defaultCheck1" formControlName="acceptTerms">
+                    <p [ngClass]="{ 'has-error':  submitted && registerForm.controls.acceptTerms.errors }">        
+
+                    <input class="form-check-input md-icon-float" type="checkbox" value="" id="defaultCheck1" formControlName="acceptTerms"></p>
                     <label class="form-check-label" for="defaultCheck1" >
                         By marking this checkbox, you agree to our 
                    
@@ -58,7 +62,7 @@ class="p  alert-danger">
 </div>
 <div class="container2">
 <button class="btn btn2" (click)="submit()">Sign Up</button></div>
-</form>
+</form></div>
 <div class="container2">
 <mat-divider class="divide"></mat-divider></div>
 

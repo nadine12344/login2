@@ -20,6 +20,7 @@ registerForm:FormGroup;
   constructor(private formBuilder: FormBuilder, private registerService:LogRegisterService) { }
 
   ngOnInit(): void {
+    this.submitted=false
   //  this.registerForm= new FormGroup({
   //     email:new FormControl(null, [Validators.required,Validators.email]),
   //     password:new FormControl(null,[Validators.required])

@@ -2,22 +2,24 @@
     Login
     
 </h1>
-<div class="container" *ngIf="success">success</div>
-    
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <div class="container">Using</div>
 
-  <div class="container"><img class="i1 img-responsive" src="assets/images/google.png">
-      <img class="i1 img-responsive" src="assets/images/fb.png">
-      <img class="i1 img-responsive" src="assets/images/windows-8-icon.png">
-      <img class="i3 img-responsive" src="assets/images/line2.png">
-      <img class="i1 img-responsive" src="assets/images/icon3.png">
-      <img class="i1 img-responsive" src="assets/images/icon2.png"></div>
+<div class="container" *ngIf="success">success</div>
+<div class="container3">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="container">Using</div>
+  <div class="container"><i class="fa fa-google" aria-hidden="true"></i>
+    <i class="fa fa-facebook" aria-hidden="true"></i>
+    <i class="fa fa-windows" aria-hidden="true"></i>
+
+      <mat-divider [vertical]="true"></mat-divider>
+      <i class="fa fa-square-o" aria-hidden="true">
+        
+      </i>      <i class="fa fa-university" aria-hidden="true"></i>    </div>
       <div class="container2">
-          <img class="i2 " src="assets/images/line.png">
+        <mat-divider class="half"></mat-divider>
           <span>or</span>
-          <img class="i2 " src="assets/images/line.png">
-      </div>
+          <mat-divider class="half"></mat-divider>
+        </div>
       <div  *ngIf=" submitted && (loginForm.controls.password.errors || loginForm.controls.email.errors)" 
     class="p  alert-danger">  
   
@@ -48,7 +50,7 @@
                   </div>
                 <button class="a btn btn-success" type="submit">Log in</button>
   
-</form>
+</form></div>
 <div class="container3">
     <span>New User?</span>
     <a  routerLinkActive='active' [routerLink]="['/register']">Register Now for Free</a>

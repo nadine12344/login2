@@ -13,10 +13,43 @@ h1{
     width:96%;
 
 }
+.fa-square-o{
+    background-color: rgb(236, 69, 47);
+  
+}
+[class*="fa fa-"] {
+    width:60px;
+    height:60px;
+    line-height: 60px;
+   margin: 9px;
+    border-radius: 80%;
+    color: #fff;
+  
+
+   
+    font-size:150%;
+    text-align: center;
+}
+
+.has-error input[type="email"],
+.has-error input[type="password"]
+
+ {
+    border-color: rgb(216, 12, 12);
+    color: rgb(230, 14, 14);
+    
+}
+.half{
+    margin: 7px;
+    margin-top:10px;
+    width:90%
+   
+}
 .p{
     border-left: 10px solid  rgb(209, 33, 33);
     color:  rgb(219, 47, 47);
     font:Ariel;
+    font-size: small;
     background-color: rgb(253, 235, 237);
     padding: 8px 0px 0.02px 0px;
     margin:20px 0px 20px 0px;}
@@ -103,7 +136,8 @@ a{
 }
 form{
 
-    margin:30px;
+  
+    margin-top: 10px;
     margin-bottom: 0px;
     padding:10px;
     padding-top: 30px;
@@ -116,6 +150,8 @@ form{
     font-size: large;
     font-weight: 200;
 }}
-ng-tempate{
-    background-color:red !important;
+@media only screen and (min-width: 800px) {
+    form{
+        width:750px
+    }
 }
